@@ -1,0 +1,39 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__
+__pycache__/
+
+# Ignore the virtual environment folder (if using virtualenv)
+venv/
+env/
+envs/
+*.live
+
+# Ignore local development settings
+*.env
+
+# Ignore database files
+db.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore media files (user-uploaded content)
+media/
+
+# Ignore static files (collected static files)
+static/
+
+# Ignore any secrets or sensitive information
+secret_key.txt
+*.key
+
+# Ignore migration files (if you're not sharing them)
+**/migrations/*.py
+
+# Ignore development-related files and directories
+.vscode/
+*.idea/
+*.pyproj
+*.git
+*.DS_Store
