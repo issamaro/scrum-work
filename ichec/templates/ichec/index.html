@@ -1,0 +1,39 @@
+{% extends 'ichec/layout/base.html' %}
+{% load static %}
+
+{# HEAD #}
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'ichec/style.css' %}">
+    {% endblock style %}
+    {% block page_title %}ICHEC - Home{% endblock page_title %}
+
+{# BODY #}
+{% block body %}
+    <div id="horizontalcontainer">
+
+        {# HEADER #}
+        {% include "ichec/include/nav.html" %}
+
+        {# MAIN #}
+        <main id="home">
+            <div class="wrapper content">
+                <div class="headline">
+                    <h1>Welcome to ICHEC Brussels Management School</h1>
+                    <q>an institution with an international dimension turned towards the field</q>
+                </div>
+                <div id="talent-developer">
+                    <div id="text">
+                        <h2>ICHEC, Talent Developer</h2>
+                        <p>We train our students to become responsible managers open to the world.</p>
+                        <p>To achieve this mission, our training project prioritizes the link to the field in a rigorous approach powered by research.</p>
+                        <p>The knowledge, skills and competencies developed allow graduates to enroll in a process of LIFELong learning.
+                        <p>Respect, solidarity and integrity are the values that build the ICHEC spirit.</p>
+                    </div>
+                    <div id="masters-div-001">
+                        <a id="masters-button-001" class="button" href="{% url "ichec:masters" %}">Masters</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock body %}

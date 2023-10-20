@@ -1,0 +1,10 @@
+{% load static %}
+    <header>
+        <div class="wrapper">
+        <a id="nav-logo" href="{% url 'ichec:home' %}">
+            <img alt="ICHEC's logo" src="{% static "ichec/ichec-logo.png" %}" height="60" width="auto">
+        </a>
+        <a href="{% url 'ichec:home' %}">Home</a>
+        <a href="{% url 'ichec:masters' %}">Masters</a>
+        </div>
+    </header>

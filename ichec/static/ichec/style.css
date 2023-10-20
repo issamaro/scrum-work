@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.8px;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+a {
+  color: #00458a;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+q {
+  font-style: italic;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.button {
+  border-radius: 6px;
+  border: solid #00458a 2px;
+  background-color: #00458a;
+  color: white;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  height: auto;
+  min-width: 90px;
+  max-width: 120px;
+  margin: 0;
+  width: auto;
+  padding: 8px 4px;
+  width: auto;
+  text-align: center;
+}
+
+div#horizontalcontainer {
+  display: grid;
+  grid-template-rows: 90px calc(100dvh - 90px);
+  row-gap: 40px;
+}
+div#horizontalcontainer .wrapper {
+  margin: 0 auto;
+  width: 1300px;
+}
+div#horizontalcontainer header {
+  box-shadow: 0px 0px 6px rgb(216, 216, 216);
+  position: sticky;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1000;
+  background-color: white;
+}
+div#horizontalcontainer header div.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+div#horizontalcontainer header div.wrapper a > img {
+  margin: 10px 40px 10px 0px;
+}
+div#horizontalcontainer header div.wrapper a:not(#nav-logo) {
+  margin: 0 30px;
+}
+div#horizontalcontainer header div.wrapper a#nav-logo {
+  margin: auto 0;
+}
+div#horizontalcontainer main div.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 8px;
+}
+div#horizontalcontainer main div:not(.headline):nth-child(even) {
+  background-color: #f3f3f3;
+}
+div#horizontalcontainer main div.content > div:not(.headline) {
+  padding: 20px 30px;
+}
+div#horizontalcontainer main#home div#talent-developer {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+}
+div#horizontalcontainer main#home div#talent-developer div#masters-div-001 {
+  display: flex;
+  justify-content: center;
+}
+div#horizontalcontainer main#masters div#masters table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-spacing: 100px;
+}
+div#horizontalcontainer main#masters div#masters table tr.space > td {
+  padding: 14px 10px;
+}
+div#horizontalcontainer main#masters div#masters table tr.space > td.master-title {
+  width: 220px;
+  padding-right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+div#horizontalcontainer main#masters div#masters th {
+  font-size: 22px;
+}
+div#horizontalcontainer main#master-detail table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-spacing: 100px;
+}
+div#horizontalcontainer main#master-detail table tr.space > td {
+  padding: 16px 10px;
+}
+div#horizontalcontainer main#master-detail table tr.space > td.course-title {
+  width: 300px;
+  padding-right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+div#horizontalcontainer main#master-detail th {
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=style.css.map */

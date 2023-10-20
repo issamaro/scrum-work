@@ -1,0 +1,49 @@
+{% extends 'ichec/layout/base.html' %}
+{% load static %}
+
+{# HEAD #}
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'ichec/style.css' %}">
+    {% endblock style %}
+    {% block page_title %}ICHEC - Masters{% endblock page_title %}
+
+{# BODY #}
+{% block body %}
+    <div id="horizontalcontainer">
+
+        {# HEADER #}
+        {% include "ichec/include/nav.html" %}
+
+        {# MAIN #}
+        <main id="masters">
+            <div class="wrapper content">
+                <div class="headline">
+                    <h1>We have the Master for you.</h1>
+                    <p><i>{{ num_masters }} masters. We have what you need.</i></p>
+                </div>
+                <div id="masters">
+                    <h2>Masters</h2>
+                    <p>Select a master to get more information.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for master in masters %}
+                            <tr class="space">
+                                <td class="master-title">{{ master.title }}</td>
+                                <td>{{ master.description }}</td>
+                                <td><a class="button" href="{{master.get_absolute_url}}">Detail</a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock body %}

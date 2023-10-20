@@ -1,0 +1,45 @@
+{% extends 'ichec/layout/base.html' %}
+{% load static %}
+
+{# HEAD #}
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'ichec/style.css' %}">
+    {% endblock style %}
+    {% block page_title %}{{ master.title }}{% endblock page_title %}
+
+{# BODY #}
+{% block body %}
+    <div id="horizontalcontainer">
+
+        {# HEADER #}
+        {% include "ichec/include/nav.html" %}
+
+        {# MAIN #}
+        <main id="master-detail">
+            <div class="wrapper content">
+                <div class="headline">
+                    <h1>{{ master.title }}</h1>
+                </div>
+                <div id="masters">
+                    <h2>Courses</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for course in courses %}
+                            <tr class="space">
+                                <td class="course-title">{{ course.title }}</td>
+                                <td>{{ course.description }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock body %}

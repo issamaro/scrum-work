@@ -1,0 +1,189 @@
+// FONTS IMPORT
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600');
+
+// VARIABLES
+$font-family: "Inter", "Helvetica Neue", sans-serif;
+$primary-color: #00458a;
+$grey-color: #f3f3f3;
+$box-shadow: 0px 0px 6px rgb(216, 216, 216);
+$box-shadow-darker: 0px 0px 10px rgba(0, 0, 0, 0.2);
+$header-size: 90px;
+$header-gap: 40px;
+
+
+// START CONFIG
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.8px;
+}
+
+body {
+    font-family: $font-family;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+a {
+    color: $primary-color;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+q {
+    font-style: italic;
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.button {
+    border-radius: 6px;
+    border: solid $primary-color 2px;
+    background-color: $primary-color;
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    height: auto;
+    min-width: 90px;
+    max-width: 120px;
+    margin: 0;
+    width: auto;
+    padding: 8px 4px;
+    width: auto;
+    text-align: center;
+}
+
+div#horizontalcontainer {
+    display: grid;
+    grid-template-rows: $header-size calc(100dvh - $header-size);
+    row-gap: $header-gap;
+
+    .wrapper {
+        margin: 0 auto;
+        width: 1300px;
+    }
+
+    header {
+        box-shadow: $box-shadow;
+        position: sticky;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 1000;
+        background-color: white;
+
+        div.wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            a>img {
+                margin: 10px 40px 10px 0px;
+            }
+
+            a:not(#nav-logo) {
+                margin: 0 30px;
+            }
+
+            a#nav-logo {
+                margin: auto 0;
+            }
+        }
+    }
+
+    main {
+        div.content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 0 8px;
+        }
+        div:not(.headline):nth-child(even) {
+            background-color: $grey-color;
+        }
+        div.content>div:not(.headline) {
+            padding: 20px 30px;
+        }
+    }
+
+    main#home {
+        div#talent-developer {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            align-items: center;
+
+            div#masters-div-001 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    main#masters {
+
+        div#masters {
+            table {
+                border-collapse: collapse;
+                margin: 20px 0;
+                border-spacing: 100px;
+
+                tr.space>td {
+                    padding: 14px 10px;
+                }
+
+                tr.space>td.master-title {
+                    width: 220px;
+                    padding-right: 20px;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+
+            th {
+                font-size: 22px;
+            }
+        }
+    }
+
+    main#master-detail {
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-spacing: 100px;
+
+            tr.space>td {
+                padding: 16px 10px;
+            }
+
+            tr.space>td.course-title {
+                width: 300px;
+                padding-right: 20px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        th {
+            font-size: 22px;
+        }
+    }
+
+
+}
